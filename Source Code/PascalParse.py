@@ -96,7 +96,7 @@ def p_command_write_bad(p):
 # Statement writeln
 def p_command_writeln(p):
     '''command : WRITELN OPEN_PARENT SINGLE_QUOTE expr SINGLE_QUOTE CLOSE_PAREN SEMI_COLON'''
-    p[0] = ('WRITELN', p[1], p[2], p[4], p[5], p[6])
+    p[0] = ('WRITELN', "(", p[2], p[3], ");")
 
 
 def p_command_writeln_bad(p):
